@@ -14,6 +14,8 @@
 		A73658441D495D62005171F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73658421D495D62005171F4 /* LaunchScreen.storyboard */; };
 		A736584F1D495D62005171F4 /* FunFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A736584E1D495D62005171F4 /* FunFactsTests.swift */; };
 		A736585A1D495D62005171F4 /* FunFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73658591D495D62005171F4 /* FunFactsUITests.swift */; };
+		A73658681D4AAB64005171F4 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73658671D4AAB64005171F4 /* FactModel.swift */; };
+		A736586A1D4AC5A1005171F4 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73658691D4AC5A1005171F4 /* ColorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A73658551D495D62005171F4 /* FunFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73658591D495D62005171F4 /* FunFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFactsUITests.swift; sourceTree = "<group>"; };
 		A736585B1D495D62005171F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A73658671D4AAB64005171F4 /* FactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		A73658691D4AC5A1005171F4 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				A73658401D495D62005171F4 /* Assets.xcassets */,
 				A73658421D495D62005171F4 /* LaunchScreen.storyboard */,
 				A73658451D495D62005171F4 /* Info.plist */,
+				A73658671D4AAB64005171F4 /* FactModel.swift */,
+				A73658691D4AC5A1005171F4 /* ColorModel.swift */,
 			);
 			path = FunFacts;
 			sourceTree = "<group>";
@@ -188,18 +194,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Erick Barbosa";
 				TargetAttributes = {
 					A73658351D495D62005171F4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					A73658491D495D62005171F4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A73658351D495D62005171F4;
 					};
 					A73658541D495D62005171F4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A73658351D495D62005171F4;
 					};
 				};
@@ -256,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73658681D4AAB64005171F4 /* FactModel.swift in Sources */,
 				A736583C1D495D62005171F4 /* ViewController.swift in Sources */,
 				A736583A1D495D62005171F4 /* AppDelegate.swift in Sources */,
+				A736586A1D4AC5A1005171F4 /* ColorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -388,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -403,6 +414,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pitApps.FunFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -414,6 +426,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pitApps.FunFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -425,6 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pitApps.FunFactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunFacts.app/FunFacts";
 			};
 			name = Debug;
@@ -437,6 +452,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pitApps.FunFactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunFacts.app/FunFacts";
 			};
 			name = Release;
@@ -448,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pitApps.FunFactsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FunFacts;
 			};
 			name = Debug;
@@ -459,6 +477,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pitApps.FunFactsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FunFacts;
 			};
 			name = Release;
@@ -482,6 +502,7 @@
 				A73658601D495D62005171F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73658611D495D62005171F4 /* Build configuration list for PBXNativeTarget "FunFactsTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +511,7 @@
 				A73658631D495D62005171F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73658641D495D62005171F4 /* Build configuration list for PBXNativeTarget "FunFactsUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +520,7 @@
 				A73658661D495D62005171F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
